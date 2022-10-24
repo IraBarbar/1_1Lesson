@@ -45,6 +45,7 @@ Console.WriteLine(resalt);
 // Задача 3 . Напишите программу, которая принимает на вход координаты 2 точек и находит расстояние между 
 // ними в 2д пространстве.
 
+/*
 double FindLength(double x1, double y1, double x2, double y2)
 {
     double a = (x2 - x1);
@@ -66,5 +67,23 @@ int y2 = Convert.ToInt32(Console.ReadLine());
 
 double resalt = Math.Round((FindLength(x1, y1, x2, y2)), 2);
 
-
 Console.WriteLine(resalt);
+*/
+
+//Задача 4. Напиште программу, которая принимает на вход число N  и выводит квадраты чисел
+// от 1 до N.
+
+void SquaNum(int n)
+{
+    int i = 1;
+    while( i <= n)
+    {
+       Console.Write( (i * i) + " ");
+       i++;
+    }
+}
+
+Console.WriteLine("Input a number N");
+int n = Convert.ToInt32(Console.ReadLine());
+
+SquaNum(n);
