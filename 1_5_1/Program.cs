@@ -14,7 +14,7 @@ void ShowArray ( int [] array)
         Console.Write(array [i] + " ");
     Console.WriteLine();    
 }
-
+/*
 int FindNegativeSum(int [] array)
 {
     int sum = 0;
@@ -38,3 +38,35 @@ ShowArray(myArray);
 
 int negativeSum = FindNegativeSum(myArray);
 Console.WriteLine("Sum of negative elements is " + (negativeSum));
+*/
+
+//№1 Напишите программу, которая определяет присуствует ли заданное число в массиве.
+
+bool FindNumber( int [] array, int n )
+{
+   for (int i = 0 ; i < array.Length; i++)
+        if ( array[i] == n)
+            return true;
+    return false;
+}
+
+Console.WriteLine("Input a number of elements");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input a min possible value");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input a max possible value");
+int max = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input your number: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+int [] myArray = CreateRandomArray(n, min, max);
+ShowArray(myArray);
+
+FindNumber(myArray, a);
+if (FindNumber(myArray, a) == true)
+    Console.WriteLine("Your number is in this array.");
+    else
+    Console.WriteLine("Your number is not in this array.");
