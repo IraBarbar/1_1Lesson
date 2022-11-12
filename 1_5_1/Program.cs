@@ -74,7 +74,7 @@ if (FindNumber(myArray, a) == true)
 
 //№2 Задайте массив из m  случайных чисел . Найдите кол-во элементов массива значение , которых 
 // лежат в отрезке [a,b].
-
+/*
 int FindSumElenents(int [] array, int a, int b)
 {
     int count = 0;
@@ -102,3 +102,27 @@ int b = Convert.ToInt32(Console.ReadLine());
 int [] myArray = CreateRandomArray(n, min, max);
 ShowArray(myArray);
 Console.WriteLine("The number of elements in the segment - " + FindSumElenents(myArray, a, b));
+*/
+
+//№3 Напишиите программу замену элементов массива с положительного на отрицательный и наоборот.
+
+int [] Replace(int [] array)
+{
+    for (int i = 0 ; i < array.Length; i++)
+         array[i] = array[i] * - 1;
+    return array;
+}
+
+Console.WriteLine("Input a number of elements");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input a min possible value");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input a max possible value");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int [] myArray = CreateRandomArray(n, min, max);
+ShowArray(myArray);
+
+ShowArray(Replace(myArray));
