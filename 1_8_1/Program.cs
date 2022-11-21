@@ -72,7 +72,7 @@ Show2dArray(myArray);
 В случае, если это невозможно, программа должна вывести сообщение для пользователя.
 */
 /*
-void Replace(int[,] array)
+void ReplaceRowToColumn(int[,] array)
 {
     if(array.GetLength(0) == array.GetLength(1) )
     {
@@ -88,7 +88,7 @@ void Replace(int[,] array)
 
 }
  
-Replace(myArray);
+ReplaceRowToColumn(myArray);
 Show2dArray(myArray);
 */
 /*
@@ -96,7 +96,7 @@ Show2dArray(myArray);
 Из двумерного массива целых чисел удалить строку и столбец, 
 на пересечении которых расположен наименьший элемент.
 */
-int[,] DeleteRowColum(int[,] array)
+int[,] DeleteRowColumn(int[,] array)
 {
     int posi = 0;
     int posj = 0;
@@ -131,7 +131,7 @@ int[,] DeleteRowColum(int[,] array)
     }
 return newarr;
 }
-int [,] arr = DeleteRowColum(myArray);
+int [,] arr = DeleteRowColumn(myArray);
 Show2dArray(arr);
 
 //mathprofi
