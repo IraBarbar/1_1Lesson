@@ -26,15 +26,14 @@ void Show2dArray(int[,] array)
 void ChangeRows(int[,] array, int row1, int row2)
 {
     if (row1 >= 0 && row1 < array.GetLength(0)
-     && row2 >= 0 && row2 < array.GetLength(0)
-      && row1 != row2)
+        && row2 >= 0 && row2 < array.GetLength(0)
+        && row1 != row2)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
             int temp = array[row1, j];
             array[row1, j] = array[row2, j];
             array[row2, j] = temp;
-
         }
     }
     else Console.WriteLine("Incorrect rows for chaging!");
@@ -62,7 +61,6 @@ int r1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input a number of row to change");
 int r2 = Convert.ToInt32(Console.ReadLine());
 
-
 ChangeRows(myArray, r1, r2);
 Show2dArray(myArray);
 */
@@ -84,8 +82,7 @@ void ReplaceRowToColumn(int[,] array)
                     array[j,i] = temp;
                 }
     }
-    else Console.WriteLine("Incorrect rows for chaging!");
-
+    else Console.WriteLine("Incorrect rows or columns for chaging!");
 }
  
 ReplaceRowToColumn(myArray);
